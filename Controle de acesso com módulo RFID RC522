@@ -1,3 +1,17 @@
+// Site: https://www.arduinoecia.com.br/2014/12/controle-de-acesso-modulo-rfid-rc522.html
+
+// Reconhecendo as tags e controlando o servo motor
+// No programa utilizamos a biblioteca Servo, já presente na IDE do Arduino, e  também a biblioteca MFRC522, 
+// que você encontra nesse link.
+// Adicionamos dois leds para mostrar se o acesso foi liberado (led verde, ligado à porta 5), ou  negado (led vermelho piscante,
+// ligado à porta 6).
+// Para adaptar o programa à sua tag, verifique no serial monitor o número  (UID) da tag lida pelo sensor, e então coloque esse 
+// número nessa linha, no lugar do "D8 4B 12 22" :
+// if (conteudo.substring(1) == "D8 4B 12 22") Como temos dois cartões, adicionamos duas entradas idênticas e mudamos  apenas o 
+// número do UID em cada uma delas, com um dos cartões com acesso liberado e que aciona o servo motor, movimentando o mesmo em 90 graus,
+// e outro com acesso negado, que pisca o led vermelho.
+
+
 // Programa : RFID - Controle de acesso / cancela
 // Autor : Arduino e Cia
 
